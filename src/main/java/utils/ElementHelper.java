@@ -21,6 +21,14 @@ public class ElementHelper {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
+    public  void yazdir(By degisken) {
+       List<WebElement> elements=  driver.findElements(degisken);
+        for (WebElement elem :elements
+             ) {
+            System.out.println(elem.getText());
+        }
+    }
+
 
     public void checkElement(By locator) {
         driver.findElement(locator);

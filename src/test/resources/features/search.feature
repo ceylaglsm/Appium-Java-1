@@ -1,6 +1,10 @@
 @SearchPage
 Feature: Google Search Page
 
+  @Ders
+  Scenario: Api Demos
+    Given butun tablerin ismini yazdir
+
   @Searchbox
   Scenario: Should See Search Box
     Given I am on the Search Page
@@ -18,3 +22,5 @@ Feature: Google Search Page
     When I enter "OpenAI" in the search box on Search Page
     And I click "Google'da Ara" button on Search Page
     Then I should see the Result Page
+
+

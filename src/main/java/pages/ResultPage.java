@@ -9,6 +9,7 @@ public class ResultPage {
     ElementHelper elementHelper;
 
     By resultsList = By.id("tvcap");
+    By tumElementler = By.id("android:id/text1");
 
 
     public ResultPage(WebDriver driver) {
@@ -17,6 +18,10 @@ public class ResultPage {
 
     public void checkResults() {
         elementHelper.checkElement(resultsList);
+    }
+
+    public void tumTableriYazdir(){
+        elementHelper.yazdir(tumElementler);
     }
 
 }

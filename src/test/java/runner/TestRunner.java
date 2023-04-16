@@ -7,13 +7,19 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 @CucumberOptions(
+
         features = "src/test/resources/features",
         glue = {"stepdefinitions", "utils"},
+
         plugin = {
+
                 "pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 
-        })
+        },
+        tags = "@Ders"
+
+)
 public class TestRunner extends AbstractTestNGCucumberTests {
 
     @Override

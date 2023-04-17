@@ -28,8 +28,6 @@ public class ElementHelper {
             System.out.println(elem.getText());
         }
     }
-
-
     public void checkElement(By locator) {
         driver.findElement(locator);
     }

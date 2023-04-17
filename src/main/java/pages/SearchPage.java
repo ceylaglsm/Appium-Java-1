@@ -27,16 +27,16 @@ public class SearchPage {
         elementHelper.checkElement(searchBox);
     }
 
-    public void sendKeysSearchBox(String text) {
+   /* public void sendKeysSearchBox(String text) {
         elementHelper.sendKeys(searchBox, text);
     }
-
+*/
     public void checkListBox() {
         elementHelper.checkElement(listBox);
     }
 
-    public void clickListBoxButtons(String button) {
+   /* public void clickListBoxButtons(String button) {
         elementHelper.clickListElement(listBoxButtons, button);
     }
-
+*/
 }

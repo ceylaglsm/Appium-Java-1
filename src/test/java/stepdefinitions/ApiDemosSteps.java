@@ -9,8 +9,11 @@ import pages.SearchPage;
 import utils.DriverManager;
 
 public class ApiDemosSteps {
-   ApiDemosPage apiDemosPage = new ApiDemosPage();
+   ApiDemosPage apiDemosPage = new ApiDemosPage(DriverManager.getDriver());
 
+   @Given("uygulamanin acildigi kontrol edilir")
+   public void uygulamaninAcildigiKontrolEdilir() {
+      apiDemosPage.checkApiDemosPageOpen();
+   }
 
-    }
 }

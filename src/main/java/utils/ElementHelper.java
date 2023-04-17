@@ -21,33 +21,8 @@ public class ElementHelper {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    public  void yazdir(By degisken) {
-       List<WebElement> elements=  driver.findElements(degisken);
-        for (WebElement elem :elements
-             ) {
-            System.out.println(elem.getText());
-        }
-    }
-    public WebElement findElement(By locator) {
-        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-    }
-    public void checkElement(By locator) {
-        findElement(locator);
-    }
-    public void click(By locator) {
-        findElement(locator).click();
-    }
-    public String getText(By locator) {
-        return findElement(locator).getText();
-    }
-
-    public void sendKeys(By locator,String text) {
-        findElement(locator).sendKeys(text);
-    }
-
-    public void scroll(By locator, String text) {
-
-    }
-
+   public void checkElement(By locator){
+        driver.findElement(locator);
+   }
 
 }

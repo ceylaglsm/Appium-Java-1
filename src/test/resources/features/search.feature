@@ -1,26 +1,11 @@
 @SearchPage
 Feature: Google Search Page
 
-  @Ders
+  @Ornek1
   Scenario: Api Demos
     Given butun tablerin ismini yazdir
 
-  @Searchbox
-  Scenario: Should See Search Box
-    Given I am on the Search Page
-    Then I should see search box on Search Page
-
-  @Listbox
-  Scenario: Should See List Box
-    Given I am on the Search Page
-    When I enter "OpenAI" in the search box on Search Page
-    Then I should see listbox on Search Page
-
-  @Search @ResultPage
-  Scenario: Search anyting on Google
-    Given I am on the Search Page
-    When I enter "OpenAI" in the search box on Search Page
-    And I click "Google'da Ara" button on Search Page
-    Then I should see the Result Page
-
+ @Ornek2
+ Scenario: Get Text
+   Given uygulamanin basliginin "API Demos" oldugu kontrol edilir
 

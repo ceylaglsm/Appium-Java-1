@@ -28,33 +28,22 @@ public class ElementHelper {
             System.out.println(elem.getText());
         }
     }
+    public WebElement findElement(By locator) {
+        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
     public void checkElement(By locator) {
-        driver.findElement(locator);
+        findElement(locator);
+    }
+    public void click(By locator) {
+        findElement(locator).click();
+    }
+    public String getText(By locator) {
+        return findElement(locator).getText();
     }
 
-    public void clickElement(By locator) {
-        WebElement element = driver.findElement(locator);
-        element.click();
+    public void sendKeys(By locator,String text) {
+        findElement(locator).sendKeys(text);
     }
-
-    public void clickListElement(By locator, String text) {
-        boolean check = false;
-        List<WebElement> elements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
-        for (WebElement element : elements) {
-            if (element.getAttribute("value").contains(text)) {
-                element.click();
-                check = true;
-                break;
-            }
-        }
-        Assert.assertTrue(check);
-    }
-
-    public void sendKeys(By locator, String text) {
-        WebElement element = driver.findElement(locator);
-        element.sendKeys(text);
-    }
-
 
     public void scroll(By locator, String text) {
 

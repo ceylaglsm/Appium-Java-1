@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 import pages.ApiDemosPage;
 import pages.SearchPage;
 import utils.DriverManager;
@@ -16,4 +17,11 @@ public class ApiDemosSteps {
       apiDemosPage.checkApiDemosPageOpen();
    }
 
+   @Given("Uygulamanin basliginin {string} oldugu kontrol edilir")
+   public void uygulamaninBasligininOlduguKontrolEdilir(String baslik) {
+      String title = apiDemosPage.getApiDemosTitle();
+      System.out.println("title = " + title);
+      Assert.assertEquals(title,baslik,"baslik ayni degil");
+
+   }
 }

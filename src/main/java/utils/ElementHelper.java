@@ -31,6 +31,7 @@ public class ElementHelper {
         findElement(locator).click();
     }
     public String getText(By locator) {
+        System.out.println("findElement(locator).getText() = " + findElement(locator).getText());
         return findElement(locator).getText();
     }
 

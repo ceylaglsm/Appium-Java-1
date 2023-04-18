@@ -17,7 +17,7 @@ import org.testng.annotations.*;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 
         },
-        tags = "@Ornek2"
+        tags = "@Ornek4"
 
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

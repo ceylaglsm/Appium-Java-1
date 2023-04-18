@@ -17,6 +17,19 @@ Feature: Google Search Page
           Given Uygulamanin basliginin "" oldugu kontrol edilir
           When Tablerden App tabine basilir
 
+  @Ornek4
+  Scenario:
+    Given uygulamanin acildigi kontrol edilir
+    Given Uygulamanin basliginin "" oldugu kontrol edilir
+    When Tablerden App tabine basilir
+    When Tablerden ActionBar tabine tiklanir
+    When Tablerden ActionBarUsage tabine tiklanir
+    When Search butonuna tiklanir
+    When Search alanina "gulsum" yazilir
+    Then Text Area "gulsum" iceriyor mu kontrol edilir
+
+
+
 
 
 

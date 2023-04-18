@@ -39,7 +39,6 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +48,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Nis 18, 2023 03:31:29 ÖÖ</span>
+			<span class='label blue darken-3 suite-start-time'>Nis 18, 2023 04:48:31 ÖÖ</span>
 			</a>
 		</ul>
 	</div>
@@ -71,17 +70,6 @@
 			</div>
 			<!-- test toggle -->
 			<!-- category toggle -->
-			<div class='chip transparent'>
-				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
-				<i class='material-icons'>local_offer</i> Category
-				</a>
-				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@SearchPage</a></li>
-					<li><a href='#'>@Ornek2</a></li>
-					<li class='divider'></li>
-					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
-				</ul>
-			</div>
 			<!-- category toggle -->
 			<!-- clear filters -->
 			<div class='chip transparent hide'>
@@ -130,46 +118,6 @@
                 </div>
             </div>
         </div>
-        <div class='col s12 m4 l4 np-h'>
-            <div class='card-panel nm-v'>
-                <div class='left panel-name'>Scenarios</div>
-                <div class='chart-box' style="max-height:94px;">
-                    <canvas id='child-analysis' width='90' height='70'></canvas>
-                </div>
-                <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>1</span> scenarios passed</span>
-                </div>
-                <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> others
-                </div>
-            </div>
-        </div>
-        <div class='col s12 m4 l4 np-h'>
-            <div class='card-panel nm-v'>
-                <div class='left panel-name'>Steps</div>
-                <div class='chart-box' style="max-height:94px;">
-                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
-                </div>
-                <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>2</span> steps passed</span>
-                </div>
-                <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> others
-                </div>
-            </div>
-        </div>
     </div>
     <div id="timeline-chart" class="row nm-v nm-h">
         <div class="col s12 m12 l12 np-h">
@@ -185,10 +133,10 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Google Search Page</span>
-						<span class='test-time'>Nis 18, 2023 03:31:30 ÖÖ</span>
+						<span class='test-time'>Nis 18, 2023 04:48:33 ÖÖ</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -199,32 +147,6 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='2' status='pass'>
-
-	<span class='duration right label'>00 00 13.626</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Get Text</div>
-	</div>
-	
-	
-		<div class='category-list'>
-				<span class='category label'>@SearchPage</span>
-				<span class='category label'>@Ornek2</span>
-		</div>
-	
-	<ul class='steps'>
-		<li test-id='5' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.ApiDemosSteps.uygulamaninBasligininOlduguKontrolEdilir(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Uygulamanin basliginin "API Demos" oldugu kontrol edilir</div>
-
-
-		</li>
-		<li test-id='7' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>utils.Hooks.afterScenario(io.cucumber.java.Scenario)</div>
-
-
-		</li>
-	</ul>
-</div>
 					</div>
 				</li>
 			</ul>
@@ -249,100 +171,7 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><div id='category-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='category-collection' class='category-collection'>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@SearchPage</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Nis 18, 2023 03:31:30 ÖÖ</td>
-										<td class='linked' test-id='2'>Get Text</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Ornek2</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Nis 18, 2023 03:31:30 ÖÖ</td>
-										<td class='linked' test-id='2'>Get Text</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='category-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -356,64 +185,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>0</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>0</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nis 18, 2023 03:31:29 ÖÖ</div>
+					<div class='panel-lead'>Nis 18, 2023 04:48:31 ÖÖ</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nis 18, 2023 03:31:45 ÖÖ</div>
+			 		<div class='panel-lead'>Nis 18, 2023 04:48:33 ÖÖ</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 16.020</div>
-				</div>
-			</div>
-			<div class='col s6'>
-				<div class='card-panel dashboard-categories'>
-					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
-					
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Passed</th>
-							<th>Failed</th>
-							<th>Skipped</th>
-							<th>Passed %</th>
-						</tr>
-						<tr>
-							<td>@SearchPage</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@Ornek2</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-					</table>
+					<div class='panel-lead'>00 00 01.674</div>
 				</div>
 			</div>
 		</div>
@@ -431,16 +227,16 @@
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 1,
-				passChild: 1,
+				childCount: 0,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 2,
-				passGrandChild: 2,
+				grandChildCount: 0,
+				passGrandChild: 0,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -452,7 +248,7 @@
 		
 		<script>
 			var timeline = {
-			        "Google Search Page":13.633
+			        "Google Search Page":0
 			};
 		</script>
 		

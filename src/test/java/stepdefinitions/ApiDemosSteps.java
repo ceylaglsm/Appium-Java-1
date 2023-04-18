@@ -29,4 +29,15 @@ public class ApiDemosSteps {
    public void tablerdenAppTabineBasilir() {
       apiDemosPage.clickAppTab();
    }
+
+   @When("Tablerden ActionBar tabine tiklanir")
+   public void tablerdenActionBarTabineTiklanir() {
+      apiDemosPage.clickActionBarTab();
+   }
+   @When("Tablerden ActionBarUsage tabine tiklanir")
+   public void tablerdenActionBarUsageTabineTiklanir() {
+      apiDemosPage.clickActionBarUsageTab();
+   }
+
+
 }

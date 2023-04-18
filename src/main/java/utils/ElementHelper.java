@@ -24,18 +24,38 @@ public class ElementHelper {
     public WebElement findElement(By locator) {
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
+
+    public List<WebElement> findElements(By locator) {
+        return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+    }
+
     public void checkElement(By locator) {
         findElement(locator);
     }
+
     public void click(By locator) {
         findElement(locator).click();
     }
+
     public String getText(By locator) {
         System.out.println("findElement(locator).getText() = " + findElement(locator).getText());
         return findElement(locator).getText();
     }
 
-    public void sendKeys(By locator,String text) {
+    public void sendKeys(By locator, String text) {
         findElement(locator).sendKeys(text);
+    }
+
+    public void clickElementWithText(By locator, String text) {
+        boolean check = false;
+        List<WebElement> elementList = findElements(locator);
+        for (WebElement elem : elementList) {
+            if (elem.getText().equals(text)) {
+                check = true;
+                elem.click();
+                break;
+            }
+        }
+        Assert.assertTrue(check, "listede istedigin texteki elemani bulamadim!!!");
     }
 }

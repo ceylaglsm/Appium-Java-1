@@ -12,6 +12,7 @@ public class ApiDemosPage {
     By tab_App = By.xpath("//android.widget.TextView[@content-desc=\"App\"]");
     By tab_ActionBar = By.xpath("//android.widget.TextView[@content-desc=\"Action Bar\"]");
     By tab_ActionBarUsage = By.xpath("//android.widget.TextView[@content-desc=\"Action Bar Usage\"]");
+    By tabsList = By.id("android:id/text1");
 
     public ApiDemosPage(WebDriver driver) {
         this.elementHelper = new ElementHelper(driver);
@@ -33,8 +34,13 @@ public class ApiDemosPage {
     public void clickActionBarTab() {
         elementHelper.click(tab_ActionBar);
     }
+
     public void clickActionBarUsageTab() {
         elementHelper.click(tab_ActionBarUsage);
+    }
+
+    public void clickTab(String text) {
+        elementHelper.clickElementWithText(tabsList, text);
     }
 }
 

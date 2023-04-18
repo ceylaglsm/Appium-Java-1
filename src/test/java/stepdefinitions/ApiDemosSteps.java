@@ -24,4 +24,9 @@ public class ApiDemosSteps {
       Assert.assertEquals(title,baslik,"baslik ayni degil");
 
    }
+
+   @When("Tablerden App tabine basilir")
+   public void tablerdenAppTabineBasilir() {
+      apiDemosPage.clickAppTab();
+   }
 }

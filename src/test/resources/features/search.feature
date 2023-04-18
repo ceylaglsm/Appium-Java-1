@@ -11,5 +11,13 @@ Feature: Google Search Page
       Scenario: Get Text
         Given Uygulamanin basliginin "" oldugu kontrol edilir
 
+        @Ornek3
+        Scenario:
+          Given uygulamanin acildigi kontrol edilir
+          Given Uygulamanin basliginin "" oldugu kontrol edilir
+          When Tablerden App tabine basilir
+
+
+
 
 

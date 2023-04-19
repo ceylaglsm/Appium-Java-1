@@ -28,15 +28,34 @@ Feature: Google Search Page
     Then Text Area "gulsum" iceriyor mu kontrol edilir
 
   @Ornek5
-  Scenario:
+  Scenario Outline:SendKeys
     Given uygulamanin acildigi kontrol edilir
     Given Uygulamanin basliginin "" oldugu kontrol edilir
-    When Tablerden "App" tabine tiklanir
-    When Tablerden "Action Bar" tabine tiklanir
-    When Tablerden "Action Bar Usage" tabine tiklanir
+    When Tablerden "<tab1>" tabine tiklanir
+    When Tablerden "<tab2>" tabine tiklanir
+    When Tablerden "<tab3>" tabine tiklanir
     When Search butonuna tiklanir
-    When Search alanina "gulsum" yazilir
-    Then Text Area "gulsum" iceriyor mu kontrol edilir
+    When Search alanina "<text>" yazilir
+    Then Text Area "<text>" iceriyor mu kontrol edilir
+    Examples:
+      | tab1 | tab2       | tab3             | text   |
+      | App  | Action Bar | Action Bar Usage | gulsum |
+      | App  | Action Bar | Action Bar Usage | uslu   |
+      | App  | Action Bar | Action Bar Usage | QA     |
+
+
+    @Ornek6
+    Scenario: Scroll Ui selector/Ui scrollable
+      When Tablerden Graphics tabine tiklanir
+      When Tablerden Touch Paint tabine tiklanir
+
+  @Ornek7
+  Scenario: Scroll Ui selector/Ui scrollable
+    When Tablerden Graphics tabine tiklanir
+    When Tablerden ikinci.defa Touch Paint tabine tiklanir
+
+
+
 
 
 

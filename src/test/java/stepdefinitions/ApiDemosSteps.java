@@ -45,4 +45,20 @@ public class ApiDemosSteps {
     public void tablerdenTabineTiklanir(String text) {
         apiDemosPage.clickTab(text);
     }
+
+    @When("Tablerden Touch Paint tabine tiklanir")
+    public void tablerdenTouchPaintTabineTiklanir() {
+        apiDemosPage.clickTouchPaintTab();
+    }
+
+    @When("Tablerden Graphics tabine tiklanir")
+    public void tablerdenGraphicsTabineTiklanir() {
+        apiDemosPage.clickGraphicsTab();
+    }
+
+
+    @When("Tablerden ikinci.defa Touch Paint tabine tiklanir")
+    public void tablerdenIkinciDefaTouchPaintTabineTiklanir() {
+        apiDemosPage.clickTouchPaintTab2();
+    }
 }

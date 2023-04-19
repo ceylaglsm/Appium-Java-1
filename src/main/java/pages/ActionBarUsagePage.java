@@ -30,5 +30,9 @@ ElementHelper elementHelper;
 
         Assert.assertTrue(elementHelper.getText(gulsumText).contains("gulsum"));
     }
+
+    public void scroll(){
+
+    }
 }
 

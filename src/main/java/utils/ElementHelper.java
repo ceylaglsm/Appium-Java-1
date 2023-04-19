@@ -58,4 +58,13 @@ public class ElementHelper {
         }
         Assert.assertTrue(check, "listede istedigin texteki elemani bulamadim!!!");
     }
+
+    public void scroll(By locator){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        RemoteWebElement element =(RemoteWebElement)driver.findElement(locator);
+        HashMap<String, String> scrollObject = new HashMap<String, String>();
+        scrollObject.put("direction", "down");
+        scrollObject.put("element", element.getId());
+        js.executeScript("mobile: scroll", scrollObject);
+    }
 }
